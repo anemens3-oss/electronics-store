@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone — Добавить товар</title>
+    <link rel="stylesheet" href="style-home.css">
+</head>
+<body>
+    <header class="header">
+        <h1>ShopZone</h1>
+        <nav>
+            <a href="index-home.html">Home</a>
+            <a href="index-products.html">Products</a>
+            <a href="index-cart.html">About Us</a>
+        </nav>
+        <nav class="user-nav">
+            <input type="button" value="Log in" class="log" id="loginBtn">
+        </nav>
+    </header>
+
+    <div class="container form-page">
+        <main class="form-card">
+            <h2>Добавить новый товар</h2>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="productName">Название товара</label>
+                    <input type="text" id="productName" name="productName" placeholder="Например: Iphone 17 pro max" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productDescription">Описание</label>
+                    <textarea id="productDescription" name="productDescription" rows="4" placeholder="Краткое описание товара" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPrice">Стоимость, $</label>
+                    <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" placeholder="0.00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPhoto">Фото товара</label>
+                    <input type="file" id="productPhoto" name="productPhoto" accept="image/*" required>
+                    <img id="photoPreview" class="photo-preview" alt="Превью фото" style="display:none;">
+                </div>
+
+                <button type="submit" class="buy-button">Добавить товар</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="../JavaScript/file.js"></script>
+</body>
+</html>
